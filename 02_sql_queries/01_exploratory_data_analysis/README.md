@@ -35,7 +35,7 @@ Uneven distribution, potential sales concentration by category.
 
 Customer Income:  
 Range:  
-10K – 170K yearly income
+10K – 170K yearly income  
 Covers low to high income segments → good for segmentation.
 
 ---  
