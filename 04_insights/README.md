@@ -1,63 +1,179 @@
-# Business Insights & Recommendations
-### Trend Analysis
-**Key Finding:**
-- Sales declined by 41.5% in 2012 before rebounding by 280.1% in 2013, indicating a strong business recovery.
-- California consistently generated the highest sales, while several states showed weaker or declining performance, indicating uneven regional growth.
-- Sales consistently peaked during Q4 (October–December), revealing a strong seasonal demand pattern.
-- California maintained stable monthly growth, while smaller states experienced greater sales volatility.
-- Running totals and moving averages indicated steady long-term business growth throughout the analysis period.
-- Long-term revenue growth was primarily driven by California, indicating a high dependence on a single market.
 
-**Recommendation:**
-- Analyze the factors that contributed to the 2013 recovery and replicate successful strategies to sustain future growth.
-- Prioritize investment in high-performing states while identifying opportunities to improve sales in underperforming regions.
-- Increase inventory, operational capacity, and marketing efforts ahead of Q4 to maximize sales opportunities.
-- Develop region-specific sales strategies and improve demand forecasting to better manage fluctuations across states.
-- Use cumulative metrics alongside moving averages to monitor long-term performance and support more accurate sales forecasting.
-- Diversify revenue by strengthening sales performance in emerging states while maintaining growth in top-performing markets.
+# SQL Project Analysis
 
-### Customer Analysis
-**Key Finding:**
-- Most customers are New Customers, making up over 80% of the customer base and contributing the largest share of total sales.
-- Long-Term Customers spend more per order, showing higher purchasing value even though they represent a smaller group of customers.
-- Bikes are the most purchased product category across all customer income levels, making them the main driver of sales.
-- Middle-Income customers contribute the highest sales, making them the most valuable customer segment.
+## Introduction
 
-**Recommendation:**
-- Focus on retaining new customers through loyalty programs and personalized offers to encourage repeat purchases.
-- Prioritize marketing campaigns for Bikes and target Middle-Income customers to maximize future sales.
+This project was created to strengthen my SQL and business analytics skills by analyzing AdventureWorksDW2025, a retail sales data warehouse. Using SQL Server, I explored sales trends, customer behavior, product performance, profitability, and geographic performance to uncover business insights that support data-driven decision making.
 
-### Product Analysis
-**Key Finding:**
-- Bikes dominate the business, generating 96% of total revenue despite representing a smaller sales volume than Accessories.
-- Revenue became slightly more diversified in 2013, but Bikes remained the primary revenue driver with over 93% contribution.
-- The top-selling products are consistently Road and Mountain bike models, indicating strong customer demand for premium bicycle products.
+### Dashboard File
+This project contains SQL scripts organized by business analysis topics.  
+1. [Data Exploration](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/tree/main/02_sql_queries/01_exploratory_data_analysis) 
+2. [Trend Analysis](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/blob/main/02_sql_queries/02_trend_analysis.sql)
+3. [Customer Analysis](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/blob/main/02_sql_queries/03_customer_analysis.sql)
+4. [Product Analysis](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/blob/main/02_sql_queries/04_product_analysis.sql)
+5. [Profitability Analysis](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/blob/main/02_sql_queries/05_profitability_analysis.sql)
+6. [geographic_analysis](https://github.com/Ayunibellaa/SQL_Project_Data_Analysis/blob/main/02_sql_queries/06_geographic_analysis.sql)
 
-**Recommendation:**
-- Prioritize investment in the Bikes category while protecting its profitability through inventory and pricing optimization.
-- Continue growing Accessories and Clothing as complementary categories to reduce dependency on Bikes.
-- Maintain stock availability and highlight these products in promotional campaigns to maximize revenue.
+### Questions to Analyze
 
-### Profitability Analysis
-**Key Finding:**
-- Bikes generated the highest profit despite having a lower profit margin than Accessories. This shows that high sales volume made Bikes the biggest contributor to overall profitability.
-- Accessories achieved the highest profit margin (62.6%) but contributed relatively little to total profit due to low sales value. There is an opportunity to increase profitability by growing Accessories sales.
-- Bikes consistently ranked as the most profitable category each year, indicating stable business performance over time.
-- Several Road-150 and Mountain-200 models dominated the list of top-profit products, making them the key revenue drivers.
+To understand the business performance, I asked the following questions:
 
-**Recommendation:**
-- Continue investing in Bikes as the core profit driver while maintaining its sales growth.
-- Increase cross-selling and promotional efforts for Accessories to capitalize on its high profit margin.
-- Prioritize inventory and marketing for the highest-profit Road-150 and Mountain-200 products to maximize returns.
+1. **How has sales performance changed over time?**
+2. **What customer segments generate the highest business value?**
+3. **Which products contribute the most to revenue?**
+4. **Which products and categories generate the highest profit?**
+5. **Which geographic markets contribute the most to business performance?**
 
-### Geographic Analysis
-**Key Finding:**
-- California is the primary revenue driver, contributing approximately 61% of total sales, making business performance highly dependent on a single market.
-- Washington and Oregon consistently rank as the second and third largest markets, indicating strong regional demand beyond California.
-- Most other states contribute only a very small share of total sales, suggesting uneven geographic market penetration.
-- California maintained its market leadership throughout multiple years, showing stable customer demand rather than temporary growth.
+### SQL Skills Used
 
-**Recommendation:**
-- Reduce business dependency on California by expanding marketing and sales efforts in high-potential states such as Washington and Oregon.
-- Investigate why many states generate minimal sales to identify opportunities for market expansion or improve local sales strategies.
-- Replicate successful sales strategies from top-performing states into underperforming regions where market potential still exists.
+The following SQL techniques were applied throughout this project:
+
+- **🗃️ JOINs**
+- **📊 Aggregate Functions**
+- **🪟 Window Functions**
+- **🧮 Common Table Expressions (CTEs)**
+- **🔍 Subqueries**
+- **📅 Date Functions**
+- **🔢 Ranking Functions**
+- **⚡ CASE WHEN**
+- **📈 Running Totals & Moving Average**
+
+### Data Jobs Dataset
+
+The dataset used for this project is AdventureWorksDW2025, Microsoft's sample data warehouse for business intelligence and analytics.  
+The project analyzes Internet Sales between 2011–2013 across customers, products, sales territories, and time.  
+It includes detailed information on:
+
+- **🛒 Sales Transactions**
+- **👥 Customer Information**
+- **🚲 Product Hierarchy**
+- **🌎 Geographic Data**
+- **📅 Calendar Dimension**
+
+## 1️⃣ How has sales performance changed over time?
+
+### 🔍 Skill:  
+
+- Aggregate Functions
+- Window Functions
+- CTE
+- Running Total
+- Moving Average
+- Date Functions
+
+### 𝄜 Analysis:  
+
+To evaluate business growth, I analyzed annual sales trends, Year-over-Year growth, monthly performance, running totals, and moving averages. I also compared performance across US states to identify regional trends and seasonality.
+
+### 💡 Insights:  
+
+- Sales declined by 41.5% in 2012 before rebounding 280.1% in 2013.
+- California consistently generated the highest revenue.
+- Sales peaked during Q4 (October–December).
+- Running totals showed continuous long-term growth.
+- California contributed the majority of revenue growth.
+
+### 🤔 So What
+
+These findings indicate strong seasonality and heavy dependence on California. Businesses should prepare inventory before Q4 while expanding growth strategies into other states to reduce market concentration.
+
+## 2️⃣ What customer segments generate the highest business value?
+
+### 🔍 Skill:
+
+- CTE
+- CASE WHEN
+- Aggregate Functions
+- Window Functions
+- ROW_NUMBER()
+
+### 𝄜 Analysis:  
+
+Customers were segmented by loyalty and annual income to evaluate purchasing behavior, average order value, revenue contribution, and preferred product categories.
+
+### 💡 Insights:  
+
+- More than 80% of customers were New Customers.
+- Long-Term Customers generated the highest Average Order Value.
+- Middle-Income customers produced the largest sales.
+- Bikes dominated spending across every income segment.
+
+### 🤔 So What
+These findings indicate strong seasonality and heavy dependence on California. Businesses should prepare inventory before Q4 while expanding growth strategies into other states to reduce market concentration.
+
+## 3️⃣ Which products contribute the most to revenue?
+
+### 🔍 Skill:
+
+- JOINs
+- Aggregate Functions
+- CTE
+- DENSE_RANK()
+- Window Functions
+
+### 𝄜 Analysis:  
+
+Product categories and individual products were ranked based on revenue contribution across all years and annually.
+
+### 💡 Insights:  
+
+- Bikes generated approximately 96% of total revenue.
+- Revenue became slightly more diversified in 2013.
+- Road Bikes and Mountain Bikes consistently ranked as the best-selling products.
+
+### 🤔 So What
+
+Although Bikes remain the core business, growing Accessories and Clothing could reduce dependence on a single product category.
+
+## 4️⃣ Which products generate the highest profit?
+
+### 🔍 Skill:
+
+- Aggregate Functions
+- Profit Calculations
+- CTE
+- DENSE_RANK()
+- Window Functions
+
+### 𝄜 Analysis:  
+
+Sales, cost, profit, and profit margins were calculated for both product categories and individual products.
+
+### 💡 Insights:  
+
+- Bikes generated the highest total profit.
+- Accessories achieved the highest profit margin (62.6%).
+- Road-150 and Mountain-200 products consistently produced the largest profits.
+
+### 🤔 So What
+
+The company should continue investing in Bikes while increasing sales of Accessories to maximize profitability through their higher margins.
+
+## 5️⃣ Which geographic regions drive business performance?
+
+### 🔍 Skill:
+
+- JOINs
+- Aggregate Functions
+- Window Functions
+- DENSE_RANK()
+
+### 𝄜 Analysis:  
+
+Sales performance was analyzed across US states by measuring revenue contribution, active customers, active cities, and product category performance.
+
+### 💡 Insights:  
+
+- California generated approximately 61% of total revenue.
+- Washington and Oregon ranked as the next strongest markets.
+- Many states contributed only a small percentage of total sales.
+- California consistently maintained market leadership.
+
+### 🤔 So What
+
+The business should diversify its revenue by expanding into high-potential states while replicating successful sales strategies from California.
+
+
+## Conclusion
+
+The analysis showed that the business relies heavily on a few key drivers, particularly California, Bikes, and Middle-Income customers. Strong seasonal demand during Q4 and the recovery in 2013 highlight opportunities for strategic planning and inventory optimization. At the same time, expanding sales in underperforming states and increasing the contribution of high-margin categories like Accessories could reduce business risk and improve long-term profitability.
